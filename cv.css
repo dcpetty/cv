@@ -12,7 +12,7 @@
   font-style: normal;
   font-display: swap; /* FOUT */
 }
-body, h1, h2, h3, h4, h5, h6 { font-size: xx-small; }
+body, h1, h2, h3, h4, h5, h6 { font-size: x-small; }
 body { font-family: "Lato", Geneva, sans-serif; 
   background-color: white; color: black;
   margin: 1% 2%; padding-left: 5%; 

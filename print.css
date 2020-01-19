@@ -2,6 +2,8 @@
  * Style sheet for ???
  */
 
+body, h1, h2, h3, h4, h5, h6 { font-size: xx-small; }
+h1, h2 { font-size: 2.0em; }
 body { color: #000; background-color: #fff; padding: 0; margin: 2%; }
 a:link { color: rgb(102, 0, 0) }        /* for visited red links */
 a:link { color: rgb(0, 102, 0) }        /* for visited green links */
