@@ -1,0 +1,26 @@
+/*
+ * Style sheet for ???
+ */
+ /*
+.head { clear: both; margin: 0; padding: .75em 0; }
+.top { margin: 0; text-align: center; }
+.eng { width: 49%; float: left; }
+.edu { width: 49%; float: right; }
+
+.eng .label, .edu .label { width: 16%; }
+.eng .bar, .edu .bar { width: 16%; }
+*/
+/*
+ * Currently, 'long' is synonymous w/ ENG and 'short' is synonymous w/ EDU.
+ */
+
+.long { /* display: compact; */ }
+/* span[class~="long"] { display: inline; } */
+.short { display: none; }
+
+nav h1:nth-child(1) { order: 2; }
+nav h1:nth-child(2) { order: 1; }
+main > section > h2 { order: 1; }
+main > section > section { min-width: 30em; } /* 72 / 2 - 6 ? */
+main > section > section:nth-child(2) { order: 3; margin-left: 0.25em; }
+main > section > section:nth-child(3) { order: 2; margin: 0 0.25em; }

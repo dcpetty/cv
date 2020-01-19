@@ -1,0 +1,11 @@
+/*
+ * Style sheet for ???
+ */
+
+body { color: #000; background-color: #fff; padding: 0; margin: 2%; }
+a:link { color: rgb(102, 0, 0) }        /* for visited red links */
+a:link { color: rgb(0, 102, 0) }        /* for visited green links */
+a:link { color: rgb(0, 0, 102) }        /* for visited blue links */
+article.notes { border: none; }
+
+@page { size : letter portrait; }

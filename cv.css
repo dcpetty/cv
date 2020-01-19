@@ -1,0 +1,82 @@
+/*
+ * Style sheet for ???
+ */
+
+/* fonts */
+@font-face {
+  font-family: 'Bonn Light Beta';
+  src:  url('https://psb-david-petty.github.io/psb-2019-2020-s1-www/www/fonts/fonts/Bonn-Beta/BONN_by_villa/BonnLightBeta.woff2') format('woff2'),
+        url('https://psb-david-petty.github.io/psb-2019-2020-s1-www/www/fonts/fonts/Bonn-Beta/BONN_by_villa/BonnLightBeta.woff') format('woff'),
+        url('https://psb-david-petty.github.io/psb-2019-2020-s1-www/www/fonts/fonts/Bonn-Beta/BONN_by_villa/bonn_light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* FOUT */
+}
+body, h1, h2, h3, h4, h5, h6 { font-size: xx-small; }
+body { font-family: "Lato", Geneva, sans-serif; 
+  background-color: white; color: black;
+  margin: 1% 2%; padding-left: 5%; 
+}
+h1 { font-family: "Playfair Display SC", serif; font-size: 2.0em; }
+h2 { font-family: "Bonn Light Beta", sans-serif; font-size: 2.0em;
+  text-transform: uppercase; font-weight: normal;
+}
+h4 { line-height: 0.25em; }
+pre { font-family: "Lucida Console", monospace; }
+ul { padding-left: 1em; list-style-type: square; }
+
+/* links */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Red Links */
+a:link { color: rgb(204, 0, 0) }        /* for unvisited links */
+a:visited { color: rgb(102, 0, 0) }     /* for visited links */
+a:hover { color: rgb(204, 102, 102) }   /* when mouse is over link */
+a:active { color: rgb(102, 102, 102) }  /* when link is clicked */
+/* Green Links */
+a:link { color: rgb(0, 204, 0) }        /* for unvisited links */
+a:visited { color: rgb(0, 102, 0) }     /* for visited links */
+a:hover { color: rgb(102, 204, 102) }   /* when mouse is over link */
+a:active { color: rgb(102, 102, 102) }  /* when link is clicked */
+/* Blue Links */
+a:link { color: rgb(0, 0, 204) }        /* for unvisited links */
+a:visited { color: rgb(0, 0, 102) }     /* for visited links */
+a:hover { color: rgb(102, 102, 204) }   /* when mouse is over link */
+a:active { color: rgb(102, 102, 102) }  /* when link is clicked */
+/* invisible links */
+.i:link { color: black; }                         /* for unvisited links */
+.i:visited { color: black; }                      /* for visited links */
+.i:hover { color: black; text-decoration: none; } /* when mouse is over link */
+.i:active { color: black; }                       /* when link is clicked */
+
+/* header / footer */
+header p, footer { text-align: center; margin: 0; }
+header img { position: absolute; top: 2%; right: 2%; }
+footer a.hf:link { color: #aaa; }                  /* for unvisited links */
+footer a.hf:visited { color: #aaa; }               /* for visited links */
+footer p { color: #aaa; font-size: xx-small; }
+footer img { display: inline-block; vertical-align: middle;}
+
+/* sections */
+nav section { display: flex; justify-content: space-around; min-width: 72em;
+  margin: 0 0 0 8%; padding: 0; text-decoration: underline; }
+main > section { display: flex; min-width: 72em; margin: 0.5em 0;}
+main > section > h2 { margin: 0.2em 0 0 0; width: 3.5em; min-width: 3.5em; }
+main > section > section {
+  display: flex; flex-direction: column;
+  width: 100%;
+  background-color: #fef /* #eef */; border: thin solid black;
+}
+main section > article { padding: 0 1em; }
+
+.header, .dated { display: flex; justify-content: space-between; }
+.header, .notes { background-color: white; }
+.header h3, .header p { min-width: 33%; }
+.header h3 + p { text-align: center; }
+.header h3 + p { text-align: center; }
+.header h3 + p + p { text-align: right; }
+article.notes { border-bottom: thick solid #fef; }
+.notes table { table-layout: fixed; font-size: xx-small; border-spacing: 0; }
+.notes td { vertical-align: top; }
+.notes td + td + td { text-align: center; width: 50%;}  /* extra notes */
