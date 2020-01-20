@@ -17,10 +17,11 @@ body { font-family: "Lato", Geneva, sans-serif;
   background-color: white; color: black;
   margin: 1% 2%; padding-left: 5%; 
 }
-h1 { font-family: "Playfair Display SC", serif; font-size: 2.0em; }
-h2 { font-family: "Bonn Light Beta", sans-serif; font-size: 2.0em;
+h1 { font-family: "Playfair Display SC", serif; }
+h2 { font-family: "Bonn Light Beta", sans-serif;  
   text-transform: uppercase; font-weight: normal;
 }
+h1, h2 { font-size: 2.0em; line-height: 1; }
 h4 { line-height: 0.25em; }
 pre { font-family: "Lucida Console", monospace; }
 ul { padding-left: 1em; list-style-type: square; }
@@ -51,16 +52,22 @@ a:active { color: rgb(102, 102, 102) }  /* when link is clicked */
 .i:active { color: black; }                       /* when link is clicked */
 
 /* header / footer */
-header p, footer { text-align: center; margin: 0; }
-header img { position: absolute; top: 2%; right: 2%; }
+header, footer { display: flex; flex-direction: column; 
+  justify-content: center; align-items: center;
+}
+header p, header figure { display: flex; margin: 0; }
+header p a { display: flex; justify-content: center; align-items: center; }
+header figure img { position: absolute; top: 2%; right: 2%; }
 footer a.hf:link { color: #aaa; }                  /* for unvisited links */
 footer a.hf:visited { color: #aaa; }               /* for visited links */
 footer p { color: #aaa; font-size: xx-small; }
-footer img { display: inline-block; vertical-align: middle;}
+header img, footer img { display: inline-block; vertical-align: middle; }
+header p img { padding: 0 2px 0 8px; height: 25px; }
 
 /* sections */
 nav section { display: flex; justify-content: space-around; min-width: 72em;
-  margin: 0 0 0 8%; padding: 0; text-decoration: underline; }
+  margin: 0 0 0 8%; padding: 0; text-decoration: underline;
+}
 main > section { display: flex; min-width: 72em; margin: 0.5em 0;}
 main > section > h2 { margin: 0.2em 0 0 0; width: 3.5em; min-width: 3.5em; }
 main > section > section {
