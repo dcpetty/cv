@@ -51,24 +51,24 @@ a:active { color: rgb(102, 102, 102) }  /* when link is clicked */
 .i:hover { color: black; text-decoration: none; } /* when mouse is over link */
 .i:active { color: black; }                       /* when link is clicked */
 
-/* header / footer */
+/* body, header *, nav *, main, footer { border: thin solid red; }
+/* sections */
 header, footer { display: flex; flex-direction: column; 
-  justify-content: center; align-items: center;
+  justify-content: center; align-items: center; 
+  margin: 0 0 0 7em; min-width: 65em;
 }
 header p, header figure { display: flex; margin: 0; }
 header p a { display: flex; justify-content: center; align-items: center; }
 header figure img { position: absolute; top: 2%; right: 2%; }
-footer a.hf:link { color: #aaa; }                  /* for unvisited links */
-footer a.hf:visited { color: #aaa; }               /* for visited links */
-footer p { color: #aaa; font-size: xx-small; }
 header img, footer img { display: inline-block; vertical-align: middle; }
 header p img { padding: 0 2px 0 8px; height: 25px; }
 
-/* sections */
-nav section { display: flex; justify-content: space-around; min-width: 72em;
-  margin: 0 0 0 8%; padding: 0; text-decoration: underline;
+nav section { display: flex; justify-content: space-around;
+  margin: 0 0 0 7em; min-width: 65em;
 }
-main > section { display: flex; min-width: 72em; margin: 0.5em 0;}
+nav h1 { text-decoration: underline; margin: 0.2em; }
+
+main > section { display: flex; min-width: 72em; margin: 0;}
 main > section > h2 { margin: 0.2em 0 0 0; width: 3.5em; min-width: 3.5em; }
 main > section > section {
   display: flex; flex-direction: column;
@@ -76,6 +76,11 @@ main > section > section {
   background-color: #fef /* #eef */; border: thin solid black;
 }
 main section > article { padding: 0 1em; }
+
+footer a.hf:link { color: #aaa; }                  /* for unvisited links */
+footer a.hf:visited { color: #aaa; }               /* for visited links */
+footer p { color: #aaa; font-size: xx-small; }
+footer p img { height: 30px; }
 
 .header, .dated { display: flex; justify-content: space-between; }
 .header, .notes { background-color: white; }

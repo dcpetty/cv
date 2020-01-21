@@ -10,4 +10,4 @@ a:link { color: rgb(0, 102, 0) }        /* for visited green links */
 a:link { color: rgb(0, 0, 102) }        /* for visited blue links */
 article.notes { border: none; }
 
-@page { size : letter portrait; }
+@page { size : legal portrait; }
