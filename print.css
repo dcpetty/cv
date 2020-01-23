@@ -4,12 +4,16 @@
 
 body * { color: #000; background-color: #fff; }
 body { padding: 0; margin: 2%; }
-body, h1, h2, h3, h4, h5, h6 { font-size: xx-small; }
+body, h1, h2, h3, h4, h5, h6 { font-size: xx-small;
+  /* Browsers do not support page-break-after: avoid; */
+  page-break-after: avoid;
+}
 h1, h2 { font-size: 2.0em; }
+header p img { height: 15px; }
 header figure img { top: 1%; right: 1%; height: 60px;}
 a:link { color: rgb(102, 0, 0) }        /* for visited red links */
 a:link { color: rgb(0, 102, 0) }        /* for visited green links */
 a:link { color: rgb(0, 0, 102) }        /* for visited blue links */
 article.notes { border: none; }
 
-@page { size : legal portrait; }
+@page { size : letter portrait; }

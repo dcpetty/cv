@@ -82,6 +82,7 @@ footer a.hf:visited { color: #aaa; }               /* for visited links */
 footer p { color: #aaa; font-size: xx-small; }
 footer p img { height: 30px; }
 
+.icons { padding: 1em 0; }
 .header, .dated { display: flex; justify-content: space-between; }
 .header, .notes { background-color: white; }
 .header h3, .header p { min-width: 33%; }
