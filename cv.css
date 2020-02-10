@@ -17,8 +17,8 @@ body { font-family: "Lato", Geneva, sans-serif;
   background-color: white; color: black;
   margin: 1% 2%; padding-left: 5%; 
 }
-h1 { font-family: "Playfair Display SC", serif; }
-h2 { font-family: "Bonn Light Beta", sans-serif;  
+/* h1 { font-family: "Playfair Display SC", serif; } */
+h1, h2 { font-family: "Bonn Light Beta", sans-serif;  
   text-transform: uppercase; font-weight: normal;
 }
 h1, h2 { font-size: 2.0em; line-height: 1; }
