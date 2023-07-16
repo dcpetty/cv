@@ -19,7 +19,7 @@
 | https://www.iconfinder.com/Chanut-is | https://www.iconfinder.com/iconsets/resume-solid-essential | `7791654_website_world wide web_internet_globe_network_icon.svg` |
 
 
-## Fontawesome &mdash; Github
+## Font Awesome &mdash; Github
 
 ![envelope](./github-fontawesome-font-awesome-brands-creative-commons.svg)
 ![envelope](./github-fontawesome-font-awesome-solid-envelope.svg)
@@ -45,7 +45,7 @@
 |  https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs | https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/solid/phone.svg | `phone.svg` |
 |  https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs | https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/brands/twitter.svg | `twitter.svg` |
 
-## Fontawesome &mdash; IconFinder
+## Font Awesome &mdash; IconFinder
 
 ![github](./iconfinder-fontawesome-1608907_github_square_icon.svg)
 ![e-mail](./iconfinder-fontawesome-1608676_envelope_o_icon.svg)
