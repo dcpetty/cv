@@ -2,7 +2,7 @@
  * Print style sheet for https://dcpetty.github.io/cv/
  */
 
-body * { color: #000; background: #fff; }
+body *, article section { background: #fff; color: #000; }  /* HACK */
 body { padding: 0; margin: 1%; }
 body, h1, h2, h3, h4, h5, h6 { font-size: xx-small;
   /* Browsers do not support page-break-after: avoid; */
@@ -18,10 +18,10 @@ a:link { color: rgb(102, 0, 0) }        /* for visited red links */
 a:link { color: rgb(0, 102, 0) }        /* for visited green links */
 a:link { color: rgb(0, 0, 102) }        /* for visited blue links */
 a { color: rgb(41, 21, 61) }            /* for purple links */
-#skills a { color: white; background: inherit; }
+#skills a { background: inherit; color: white; }
 
 .icons { margin 0; padding 0; margin-top: -2vw; }
-.icons, .icons a { color: #000; background-color: #fff; font-size: 0.25em; }
+.icons, .icons a { background: #fff; color: #000; font-size: 0.25em; }
 .icons img { height: 15px; filter: none; }
 
 body > footer p:last-child { display: none; }
