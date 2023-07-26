@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+   <style>
+main { border: thin solid red;  }
+[class^="a"] { border: thin solid green; }
+[class^="b"] { color: green; }
+.c, .d { border: thin solid black; margin-right: 1em; }
+.c::after, .d::after { content: " "; }
+p.e.f { color: #639; display: inline; }
+   </style>
+   <script>
+function arrange(classes, selector) {
+  const parent = document.querySelector(`${selector}`);
+  const elements = new Object();
+  for (const cls of classes) {
+    elements[cls] = new Array();
+    for (const element of document.querySelectorAll(`${selector} > .${cls}`)) {
+      elements[cls].push(parent.removeChild(element));
+    }
+  }
+  console.log(elements);
+  for (const cls of classes) {
+    for (const element of elements[cls]) {
+      parent.appendChild(element);
+    }
+  }
+}
+function test() {
+  arrange([ 'a', 'b', ], 'main');
+  arrange([ 'd', 'c', ], 'body > p');
+  return false;
+}
+   </script>
+  </head>
+  <body onload="return test();">
+    <main>
+      <ul class="b"><li>This is B11.</li><li>This is B12.</li></ul>
+      <p class="a">This is A1.</p>
+      <p class="a">This is A2.</p>
+      <p class="b">This is B2.</p>
+      <p class="a">This is A3.</p>
+      <p class="a">This is A4.</p>
+      <p class="b">This is B3.</p>
+      <hr>
+    </main>
+    <p><span class="c">C1</span><span class="c">C2</span><span class="c">C3</span></span><span class="d">D1</span><span class="d">D2</span><span class="d">D3</span></p>
+    <p class="e f">This is <code>class=&quot;e f&quot;</code>.</p>
+    <p class="f e">This is <code>class=&quot;f e&quot;</code>.</p>
+  </body>
+</html>

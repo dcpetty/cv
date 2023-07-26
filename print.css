@@ -2,18 +2,28 @@
  * Print style sheet for https://dcpetty.github.io/cv/
  */
 
-body * { color: #000; background-color: #fff; }
-body { padding: 0; margin: 2%; }
+body * { color: #000; background: #fff; }
+body { padding: 0; margin: 1%; }
 body, h1, h2, h3, h4, h5, h6 { font-size: xx-small;
   /* Browsers do not support page-break-after: avoid; */
   page-break-after: avoid;
 }
 h1, h2 { font-size: 2.0em; }
+header article { padding: 0 75px 2% 0; }
 header p img { height: 15px; }
 header figure img { top: 1%; right: 1%; height: 60px;}
+
+a { text-decoration: none; }
 a:link { color: rgb(102, 0, 0) }        /* for visited red links */
 a:link { color: rgb(0, 102, 0) }        /* for visited green links */
 a:link { color: rgb(0, 0, 102) }        /* for visited blue links */
-article.notes { border: none; }
+a { color: rgb(41, 21, 61) }            /* for purple links */
+#skills a { color: white; background: inherit; }
+
+.icons { margin 0; padding 0; margin-top: -2vw; }
+.icons, .icons a { color: #000; background-color: #fff; font-size: 0.25em; }
+.icons img { height: 15px; filter: none; }
+
+body > footer p:last-child { display: none; }
 
 @page { size : letter portrait; }

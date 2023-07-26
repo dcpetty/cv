@@ -1,0 +1,118 @@
+/*
+ * Global style sheet for https://dcpetty.github.io/cv/
+ */
+
+/* fonts */
+@font-face {
+  font-family: 'Bonn Light Beta';
+  src:  url('https://psb-david-petty.github.io/psb-2019-2020-s1-www/www/fonts/fonts/Bonn-Beta/BONN_by_villa/BonnLightBeta.woff2') format('woff2'),
+        url('https://psb-david-petty.github.io/psb-2019-2020-s1-www/www/fonts/fonts/Bonn-Beta/BONN_by_villa/BonnLightBeta.woff') format('woff'),
+        url('https://psb-david-petty.github.io/psb-2019-2020-s1-www/www/fonts/fonts/Bonn-Beta/BONN_by_villa/bonn_light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback; /* not FOUT */
+}
+
+/* body, h1, h2, h3, h4, h5, h6 */
+body { font-family: "Lato", Geneva, sans-serif; 
+  background: white; color: black;
+  font-size: x-small; 
+}
+/* Adjusted h* font-size & margin values scaled by 2.500 */
+h1 { font-size: 5.00em; margin: 0.67em 0; }
+h2 { font-size: 3.75em; margin: 0.83em 0; }
+/* Adjusted h* font-size & margin values scaled by 1.250 */
+h3 { font-size: 1.46em; margin: 1.00em 0; }
+h4 { font-size: 1.25em; margin: 1.17em 0; }
+h5 { font-size: 1.04em; margin: 1.33em 0; }
+h6 { font-size: 0.83em; margin: 1.50em 0; }
+
+/* h1 { font-family: "Playfair Display SC", serif; } */
+h1, h2, h3, h4, h5, h6 { 
+  color: #639; line-height: 1;
+  margin: 0; padding: 0.5vw 2vw;
+}
+h1, h2 {
+  font-family: "Bonn Light Beta", sans-serif;
+  text-transform: uppercase;
+}
+h2 { border-bottom: 2px solid #639; }
+h3, h4, h5, h6 {
+  font-family: "Lexend Deca", sans-serif; font-weight: bold; 
+}
+
+/* body > header */
+body > header { 
+  background: #6391; 
+  border-top-left-radius: 20px; border-top-right-radius: 20px;
+}
+body > header h1 { padding: 2vw 2vw 0.5vw 2vw; }
+body > header section { background: none; }
+#navigation h2 { border: none; }
+#summary .eng, #summary .edu { margin: 0; }
+body > header figure { position: absolute; top: 2em; right: 2em; margin: 0; }
+.icons { background: #639; margin: 1vw 0; padding: 1vw; display: flex; justify-content: center; align-items: center; column-gap: 2em; }
+.icons a { color: white; text-decoration: underline; }
+/* https://stackoverflow.com/a/53336754/17467335 */
+.icons img { height: 20px; vertical-align: middle; padding-right: 0.5em; 
+  filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(120deg) brightness(104%) contrast(100%); }
+
+/* code, pre */
+code, pre { font-family: "Inconsolata", monospace; }
+
+/* p, ul */
+p, ul, dl { margin: 0; padding: 0.5em 2vw; }
+ul { list-style-type: square; }
+dl { display: grid; grid-template-columns: 1fr 2fr; grid-gap: 0.5vw 0.25vw; }
+dt, dd { margin: 0; padding: 0; align-self: center; }
+
+/* links */
+a { color: inherit; text-decoration: underline; text-decoration-color: #6396; }
+a:hover { text-decoration-color: #639; }
+.i:link { text-decoration: none; }
+.i:hover { text-decoration: underline; text-decoration-color: #639; }
+
+/* #columns */
+#columns { display: flex; }
+#columns > div { width: 100%; }
+
+/* #skills */
+#skills span {
+  margin-right: 1em; padding: 0.6em 1.2em; line-height: 3em;
+  background: #639; color: white; border-radius: 20px;
+}
+#skills span::after { content: ' '; }
+
+/* article */
+article section { background: #6391; margin: 0.25vw; }
+article section header { background: white; }
+section header { display: flex; }
+/* This CSS presents <h3> <p> <p> on one row, left, center, right
+section header { display: flex; align-items: center; }
+section header h3, section header p { display: flex; flex: 1; justify-content: center; width: 100%; }
+section header h3:first-child { flex: 3; justify-content: start; border: thin solid black; }
+section header p:last-child { flex: 3; justify-content: end; border: thin solid black; }
+*/
+section header h3 { flex-grow: 1; }
+section header p {
+  margin: 0 0.25vw 0 0; padding: 0; min-width: 12ch;
+  display: flex; justify-content: flex-end; align-items: center;
+} 
+section.dated { display: flex; justify-content: space-between; }
+section.dated p + p { display: flex; justify-content: flex-end; align-items: center; padding-right: 0; width: 12ch; }
+
+section footer.notes { padding: 0 0 0.5vw 2vw; }
+section footer.notes table { border-top: thin solid #6396; }
+
+/* body > footer */
+body > footer { display: flex; flex-direction: column; 
+  justify-content: center; align-items: center; 
+  margin: 0;}
+body > footer img { display: inline-block; vertical-align: middle; }
+body > footer a.hf:link { color: #aaa; }                  /* for unvisited links */
+body > footer a.hf:visited { color: #aaa; }               /* for visited links */
+body > footer p { color: #aaa; font-size: xx-small; }
+body > footer p img { height: 30px; }
+
+/* HACKS */
+.long { display: none; }

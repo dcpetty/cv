@@ -1,0 +1,22 @@
+/*
+ * Style sheet for https://dcpetty.github.io/cv/
+ *
+ * Educator
+ */
+
+body h2.edu, body h2.eng.edu { display: block; }
+body h2.eng { display: none; }
+
+#summary .edu, #summary .eng.edu { display: block; }
+#summary .eng, #summary .long { display: none; }
+
+#objective .edu, #objective .eng.edu { display: block; }
+#objective .eng, #objective .long { display: none; }
+
+article section.edu { margin-right: 2vw; }
+article section.eng { margin-left: 2vw; }
+
+/*
+.arranged-div { display: flex; flex-direction: column-reverse; }
+.arranged-span { display: flex; flex-direction: row-reverse; justify-content: center; }
+*/
