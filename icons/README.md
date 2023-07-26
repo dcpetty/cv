@@ -109,4 +109,24 @@
 | --- | --- | --- |
 |  https://seeklogo.com/free-vector-logos/tiktok | https://seeklogo.com/vector-logo/373029/tiktok-share-icon-black | `share-icon-black-seeklogo.com.svg` |
 
+# Old CV icons
+
+This collection of icons was used in per-2023 versions of the [cv](../20210801-cv-full.html).
+
+![LinkedIn](./iconfinder_Rounded_Linkedin2_svg_5282542.svg)
+![Github](./iconfinder_github-square_1608907.svg)
+![Instagram](./iconfinder_Rounded_Instagram_svg_5282544.svg)
+![Twitter](./iconfinder_Rounded_Twitter5_svg_5282551.svg)
+![WWW](./iconfinder_globe_earth_internet_www_universal_4831024.svg)
+
+## IconFinder
+
+| Author | link | file |
+| --- | --- | --- |
+| https://www.iconfinder.com/iconfinder | https://www.iconfinder.com/icons/5282542/ | `iconfinder_Rounded_Linkedin2_svg_5282542.svg` |
+| https://www.iconfinder.com/iconfinder | https://www.iconfinder.com/icons/1608907/ | `iconfinder_github-square_1608907.svg` |
+| https://www.iconfinder.com/iconfinder | https://www.iconfinder.com/icons/5282544/ | `iconfinder_Rounded_Instagram_svg_5282544.svg` |
+| https://www.iconfinder.com/iconfinder | https://www.iconfinder.com/icons/5282551/ | `iconfinder_Rounded_Twitter5_svg_5282551.svg` |
+| https://www.iconfinder.com/iconfinder | https://www.iconfinder.com/icons/4831024/ | `iconfinder_globe_earth_internet_www_universal_4831024.svg` |
+
 <style> img { height: 50px; }</style>
