@@ -119,6 +119,7 @@ function setIconsWidth(font, size) {
   let width = 0;
   for (const child of icons.querySelectorAll(`a`)) {
     width += icons.querySelector(`img`).width ?? 0;
+    // Remove tags from HTML and parse character entities in text.
     const text = (new DOMParser().parseFromString(
       child.innerHTML.replace(/<.*>/g, ``), "text/html"))
         .documentElement.textContent;
@@ -135,9 +136,9 @@ function setIconsWidth(font, size) {
 }
 
 /** Format document with elements arranged according to classes(name).
- * Use arrange function to arrange <p> and <article> (only when a valid
- * URI query exists) in CLASSES or CLASSES.toReversed() order, depending 
- * on name. 
+ * Use arrange function to arrange <p> (always) and <article> (only when 
+ * a valid URI query exists) in CLASSES or CLASSES.toReversed() order, 
+ * depending on name. 
  * @param {string} name - name position in CLASSES determines order or reverse 
  */
 function format(name) {
