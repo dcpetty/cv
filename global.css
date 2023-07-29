@@ -29,8 +29,8 @@ h6 { font-size: 0.83em; margin: 1.50em 0; }
 
 /* h1 { font-family: "Playfair Display SC", serif; } */
 h1, h2, h3, h4, h5, h6 { 
-  color: #639; line-height: 1;
-  margin: 0; padding: 0.5vw 2vw;
+  color: #639; line-height: 1.2;  
+  margin: 0; padding: 0.25vw 2vw;
 }
 h1, h2 {
   font-family: "Bonn Light Beta", sans-serif;
@@ -87,7 +87,7 @@ a:hover { text-decoration-color: #639; }
 /* article */
 article section { background: #6391; margin: 0.25vw; }
 article section header { background: none; }
-section header { display: flex; }
+section header { display: flex; padding-right: 0vw; /* for dates */ }
 /* This CSS presents <h3> <p> <p> on one row, left, center, right
 section header { display: flex; align-items: center; }
 section header h3, section header p { display: flex; flex: 1; justify-content: center; width: 100%; }
@@ -99,7 +99,7 @@ section header p {
   margin: 0 0.25vw 0 0; padding: 0; min-width: 12ch;
   display: flex; justify-content: flex-end; align-items: center;
 } 
-section.dated { display: flex; justify-content: space-between; }
+section.dated { display: flex; justify-content: space-between; padding-right: 0vw; /* for dates */ }
 section.dated p + p { display: flex; justify-content: flex-end; align-items: center; padding-right: 0; width: 12ch; }
 
 section footer.notes { padding: 0 0 0.5vw 2vw; }
