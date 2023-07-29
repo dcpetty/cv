@@ -63,6 +63,7 @@ code, pre { font-family: "Inconsolata", monospace; }
 /* p, ul */
 p, ul, dl { margin: 0; padding: 0.5em 2vw; }
 ul { list-style-type: square; }
+ul ul { margin-left: calc(1em - 2vw); }
 dl { display: grid; grid-template-columns: 1fr 2fr; grid-gap: 0.5vw 0.25vw; }
 dt, dd { margin: 0; padding: 0; align-self: center; }
 
