@@ -84,6 +84,10 @@ a:hover { text-decoration-color: #639; }
 }
 #skills span::after { content: ' '; }
 
+/* #summary */
+#summary .eng span, #summary .edu span { display: inline; }
+#summary span::after { content: ' '; }
+
 /* article */
 article section { background: #6391; margin: 0.25vw; }
 article section header { background: none; }
