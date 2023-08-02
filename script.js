@@ -52,7 +52,7 @@ function arrange(names, selector, addRule=false) {
           elements[cls].push(parent.removeChild(element));
         }
       }
-      //console.log(elements);
+      // console.log(elements);
       // TODO: these constants are to help with adding elements between sections
 /*
       // All entries of elements have > 0 items and elements length equals CLASSES.length.
@@ -153,7 +153,7 @@ function format(name) {
  * @param {Event} e - event generating callback
  */
 function click(e) {
-  //console.log(e.currentTarget);
+  // console.log(e.currentTarget);
   const name = e?.currentTarget?.className;
   if (name) {
     format(opposite(name));
