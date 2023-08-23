@@ -6,7 +6,7 @@
 
 /** CLASSES definition and lambda functions using them. */
 const CLASSES = [`eng`, `edu`, ],
-  valid = (name) => CLASSES.includes(name) ? name : undefined,
+  valid = (name) => CLASSES.includes(name.slice(0,3)) ? name.slice(0,3) : undefined,
   opposite = (name) => valid(name) == `eng` ? `edu` : `eng`,
   stylesheet = (name) => (valid(name) ?? `eng`) == `eng` ? `engineer` : `educator`,
   classes = (name) => (valid(name) ?? `eng`) == `eng` ? CLASSES : CLASSES.toReversed(),
