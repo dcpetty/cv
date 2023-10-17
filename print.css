@@ -20,7 +20,7 @@ a:link { color: rgb(0, 0, 102) }        /* for visited blue links */
 a { color: rgb(41, 21, 61) }            /* for purple links */
 #skills a { background: inherit; color: white; }
 
-.icons { margin 0; padding 0; margin-top: -2vw; }
+.icons { margin: 1em 0; padding: 1em; margin-top: -2vw; }
 .icons, .icons a { background: #fff; color: #000; font-size: 0.25em; }
 .icons img { height: 15px; filter: none; }
 
