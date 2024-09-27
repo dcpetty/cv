@@ -4,12 +4,14 @@
  * Engineer / Educator
  */
 
-/** CLASSES definition and lambda functions using them. */
-const CLASSES = [`eng`, `edu`, ],
+/** CLASSES definition and lambda functions using them. 
+ */
+const CLASSES = [`edu`, `eng`, ], /* CLASSES[0] specifies the default style */
+  c = (n) => n ? CLASSES[1] : CLASSES[0],
   valid = (name) => CLASSES.includes(name.slice(0,3)) ? name.slice(0,3) : undefined,
-  opposite = (name) => valid(name) == `eng` ? `edu` : `eng`,
-  stylesheet = (name) => (valid(name) ?? `eng`) == `eng` ? `engineer` : `educator`,
-  classes = (name) => (valid(name) ?? `eng`) == `eng` ? CLASSES : CLASSES.toReversed(),
+  classes = (name) => (valid(name) ?? c(0)) == c(0) ? CLASSES : CLASSES.toReversed(),
+  opposite = (name) => valid(name) == c(0) ? c(1) : c(0),
+  stylesheet = (name) => (valid(name) ?? c(0)) == `eng` ? `engineer` : `educator`,
   /** Returns URI query string with leading '?' removed. */
   query = () => window.location.search.replace(/^[?]/, ``);
 
@@ -23,8 +25,7 @@ function sheet(title) {
     if (link.rel?.startsWith(`style`) && link.title) {
       link.disabled = true;
       if (link.title == title) {
-        console.log(`CSS: ${title}.css`);
-        console.log(link);
+        console.log(`CSS: ${title}.css`, link);
         link.disabled = false;
       }
     }
@@ -52,7 +53,7 @@ function arrange(names, selector, addRule=false) {
           elements[cls].push(parent.removeChild(element));
         }
       }
-      // console.log(elements);
+      // console.log(parent, elements);
       // TODO: these constants are to help with adding elements between sections
 /*
       // All entries of elements have > 0 items and elements length equals CLASSES.length.
@@ -131,7 +132,7 @@ function setIconsWidth(font, size) {
   /* Adjust node width & height by 3/4 - actual DPI v. canvas DPI */
   //width *= 72 / 96;
   const style = `min-width: ${Math.round(width * fudge)}px;`;
-  console.log(`${style}`);
+  // console.log(`${style}`);
   document.querySelector(`body`).style = style;
 }
 
@@ -144,6 +145,7 @@ function setIconsWidth(font, size) {
 function format(name) {
   arrange(classes(name), `p`);
   if (valid(query())) {
+    console.log(`Arranging articles...`)
     arrange(classes(name), `article`, true);
   }
 }
