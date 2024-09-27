@@ -11,7 +11,7 @@ body h2.edu { display: none; }
 #summary .edu, #summary .long { display: none; }
 
 #objective .eng, #objective .eng.edu { display: block; }
-#objective .edu, #objective .logn { display: none; }
+#objective .edu, #objective .long { display: none; }
 
 article section.eng { margin-right: 2vw; }
 article section.edu { margin-left: 2vw; }
@@ -20,3 +20,5 @@ article section.edu { margin-left: 2vw; }
 .arranged-div { display: flex; flex-direction: column; }
 .arranged-span { display: flex; flex-direction: row; }
 */
+
+.icons .current { display: none; }

@@ -20,3 +20,5 @@ article section.eng { margin-left: 2vw; }
 .arranged-div { display: flex; flex-direction: column-reverse; }
 .arranged-span { display: flex; flex-direction: row-reverse; justify-content: center; }
 */
+
+.icons .looking { display: none; }
