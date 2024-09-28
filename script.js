@@ -4,13 +4,17 @@
  * Engineer / Educator
  */
 
-/** CLASSES definition and lambda functions using them. 
+/** CLASSES definition (there are only two) and lambda functions using them. 
  */
 const CLASSES = [`edu`, `eng`, ], /* CLASSES[0] specifies the default style */
   c = (n) => n ? CLASSES[1] : CLASSES[0],
+  /** Returns first 3 characters of name, if valid, otherwise undefined. */
   valid = (name) => CLASSES.includes(name.slice(0,3)) ? name.slice(0,3) : undefined,
+  /** Returns CLASSES if name not valid or is c(0), otherwise CLASSES reversed. */
   classes = (name) => (valid(name) ?? c(0)) == c(0) ? CLASSES : CLASSES.toReversed(),
+  /** Return c(1) if name not valid or is c(0), otherwise c(0). */
   opposite = (name) => valid(name) == c(0) ? c(1) : c(0),
+  /** Return `engineer` if valid name is `eng` or, if name not valid and c(0) is `eng`, otherwise `educator`. */
   stylesheet = (name) => (valid(name) ?? c(0)) == `eng` ? `engineer` : `educator`,
   /** Returns URI query string with leading '?' removed. */
   query = () => window.location.search.replace(/^[?]/, ``);
@@ -36,7 +40,11 @@ function sheet(title) {
  * all elements with elements matching class names in names (removing 
  * them from the main flow) and append them to parent in groups in 
  * names order.
- * TODO: addRule currently does nothing
+ * TODO: addRule currently does nothing - nor should it - commented out 
+ *       code is left for vestigial reasons, but rules between collected 
+ *       sections are, in general, unnecessary and is *stylistically* 
+ *       unnecessary in the one place it was originally meant for: 
+ *       <article id="work-experience"...>.
  * @param {string[]} names - class names to match elements in this order
  * @param {string} selector - parent element selector
  * @param {boolean=} addRule - if true, add rule element between groups
@@ -125,10 +133,10 @@ function setIconsWidth(font, size) {
       child.innerHTML.replace(/<.*>/g, ``), "text/html"))
         .documentElement.textContent;
     const rect = getTextSize(` ${text}`,`${size}px "${font}"`);
-    console.log(`' ${text}' is ${rect.width}px wide`);
+    // console.log(`' ${text}' is ${rect.width}px wide`);
     width += rect.width;
   }
-  console.log(`    width= ${width}`);
+  // console.log(`    width= ${width}`);
   /* Adjust node width & height by 3/4 - actual DPI v. canvas DPI */
   //width *= 72 / 96;
   const style = `min-width: ${Math.round(width * fudge)}px;`;
@@ -145,7 +153,7 @@ function setIconsWidth(font, size) {
 function format(name) {
   arrange(classes(name), `p`);
   if (valid(query())) {
-    console.log(`Arranging articles...`)
+    // console.log(`Arranging articles...`)
     arrange(classes(name), `article`, true);
   }
 }
