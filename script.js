@@ -1,10 +1,10 @@
 /*
- * Javascript for https://dcpetty.github.io/cv/
+ * Javascript for https://dcpetty.dev/cv/.
  *
- * Engineer / Educator
+ * Educator / Engineer
  */
 
-/** CLASSES definition (there are only two) and lambda functions using them. 
+/** CLASSES definition (only two are valid) and lambda functions using them. 
  */
 const CLASSES = [`edu`, `eng`, ], /* CLASSES[0] specifies the default style */
   c = (n) => n ? CLASSES[1] : CLASSES[0],
