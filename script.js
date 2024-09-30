@@ -40,14 +40,15 @@ function sheet(title) {
  * all elements with elements matching class names in names (removing 
  * them from the main flow) and append them to parent in groups in 
  * names order.
+ * @param {string[]} names - class names to match elements in this order
+ * @param {string} selector - parent element selector
+ * @param {boolean=} addRule - if true, add rule element between groups
+ *
  * TODO: addRule currently does nothing - nor should it - commented out 
  *       code is left for vestigial reasons, but rules between collected 
  *       sections are, in general, unnecessary and is *stylistically* 
  *       unnecessary in the one place it was originally meant for: 
  *       <article id="work-experience"...>.
- * @param {string[]} names - class names to match elements in this order
- * @param {string} selector - parent element selector
- * @param {boolean=} addRule - if true, add rule element between groups
  */
 function arrange(names, selector, addRule=false) {
   for (const parent of document.querySelectorAll(`${selector}`)) {
