@@ -54,7 +54,7 @@ body > header figure { position: absolute; top: 2em; right: 2em; margin: 0; }
 .icons { background: #639; margin: 1vw 0; padding: 1vw; display: flex; justify-content: center; align-items: center; column-gap: 2em; }
 .icons a { color: white; text-decoration: underline; }
 /* https://stackoverflow.com/a/53336754/17467335 */
-.icons img { height: 20px; vertical-align: middle; padding-right: 0.5em; 
+.icons img, .icons svg { height: 20px; vertical-align: middle; padding-right: 0.5em; 
   filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(120deg) brightness(104%) contrast(100%); }
 
 /* code, pre */
